@@ -1,0 +1,498 @@
+<mxfile host="app.diagrams.net" modified="2026-06-29T08:00:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="abc123" version="22.1.2" type="device">
+  <diagram id="er-diagram" name="ER图">
+    <mxGraphModel dx="1600" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- 模块标题 -->
+        <mxCell id="title1" value="模块1: 用户与身份体系" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="20" width="200" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_school -->
+        <mxCell id="school" value="t_school&#10;高校信息表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="200" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="school_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="school">
+          <mxGeometry x="10" y="40" width="180" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="school_name" value="school_name VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="school">
+          <mxGeometry x="10" y="60" width="180" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="school_address" value="address VARCHAR(128)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="school">
+          <mxGeometry x="10" y="80" width="180" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="school_count" value="student_count INT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="school">
+          <mxGeometry x="10" y="100" width="180" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_student -->
+        <mxCell id="student" value="t_student&#10;学生用户表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="80" width="220" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="student">
+          <mxGeometry x="10" y="40" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_user_id" value="user_id [UK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="student">
+          <mxGeometry x="10" y="60" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_openid" value="openid VARCHAR(128)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="student">
+          <mxGeometry x="10" y="80" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_real_name" value="real_name VARCHAR(32)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="student">
+          <mxGeometry x="10" y="100" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_gender" value="gender TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="student">
+          <mxGeometry x="10" y="120" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_school_id" value="school_id [FK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="student">
+          <mxGeometry x="10" y="140" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_no" value="student_no VARCHAR(32)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="student">
+          <mxGeometry x="10" y="160" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_verify" value="verify_status TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="student">
+          <mxGeometry x="10" y="180" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_id_card" value="id_card_encrypt VARCHAR(256)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="student">
+          <mxGeometry x="10" y="200" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_phone" value="phone_encrypt VARCHAR(128)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="student">
+          <mxGeometry x="10" y="220" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_available" value="available_time JSON" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="student">
+          <mxGeometry x="10" y="240" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_skill" value="skill_tags VARCHAR(255)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="student">
+          <mxGeometry x="10" y="260" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_credit" value="credit_score INT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="student">
+          <mxGeometry x="10" y="280" width="200" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_enterprise -->
+        <mxCell id="enterprise" value="t_enterprise&#10;企业用户表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="700" y="80" width="220" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="enterprise_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="enterprise">
+          <mxGeometry x="10" y="40" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="enterprise_eid" value="enterprise_id [UK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="enterprise">
+          <mxGeometry x="10" y="60" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="enterprise_name" value="enterprise_name VARCHAR(128)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="enterprise">
+          <mxGeometry x="10" y="80" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="enterprise_credit" value="credit_code VARCHAR(32)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="enterprise">
+          <mxGeometry x="10" y="100" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="enterprise_license" value="business_license_url VARCHAR(255)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="enterprise">
+          <mxGeometry x="10" y="120" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="enterprise_verify" value="verify_status TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="enterprise">
+          <mxGeometry x="10" y="140" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="enterprise_legal" value="legal_person VARCHAR(32)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="enterprise">
+          <mxGeometry x="10" y="160" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="enterprise_contact" value="contact_name VARCHAR(32)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="enterprise">
+          <mxGeometry x="10" y="180" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="enterprise_phone" value="contact_phone_encrypt VARCHAR(128)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="enterprise">
+          <mxGeometry x="10" y="200" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="enterprise_industry" value="industry_tag VARCHAR(32)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="enterprise">
+          <mxGeometry x="10" y="220" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="enterprise_cscore" value="credit_score INT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="enterprise">
+          <mxGeometry x="10" y="240" width="200" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_admin -->
+        <mxCell id="admin" value="t_admin&#10;管理员表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="80" width="200" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="admin">
+          <mxGeometry x="10" y="40" width="180" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin_aid" value="admin_id [UK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="admin">
+          <mxGeometry x="10" y="60" width="180" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin_username" value="username [UK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="admin">
+          <mxGeometry x="10" y="80" width="180" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin_password" value="password_encrypt VARCHAR(256)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="admin">
+          <mxGeometry x="10" y="100" width="180" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin_real_name" value="real_name VARCHAR(32)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="admin">
+          <mxGeometry x="10" y="120" width="180" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin_role" value="role_type TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="admin">
+          <mxGeometry x="10" y="140" width="180" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin_status" value="status TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="admin">
+          <mxGeometry x="10" y="160" width="180" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- 关系线: school -> student -->
+        <mxCell id="rel_school_student" value="school_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" edge="1" parent="1" source="school" target="student">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- 模块2标题 -->
+        <mxCell id="title2" value="模块2: 岗位与匹配体系" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="400" width="200" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_job -->
+        <mxCell id="job" value="t_job&#10;兼职岗位表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="100" y="450" width="240" height="340" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="40" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_jid" value="job_id [UK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="60" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_eid" value="enterprise_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="job">
+          <mxGeometry x="10" y="80" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_title" value="job_title VARCHAR(128)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="100" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_type" value="job_type VARCHAR(32)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="120" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_industry" value="industry_tag VARCHAR(32)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="140" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_salary_type" value="salary_type TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="160" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_salary_amount" value="salary_amount DECIMAL(10,2)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="180" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_settlement" value="settlement_type TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="200" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_address" value="work_address VARCHAR(255)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="220" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_longitude" value="longitude DECIMAL(10,6)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="240" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_latitude" value="latitude DECIMAL(10,6)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="260" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_work_time" value="work_time JSON" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="280" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_skill" value="skill_require VARCHAR(255)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="300" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_desc" value="job_desc TEXT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="320" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_recruit" value="recruit_num INT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="340" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="job_current" value="current_num INT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job">
+          <mxGeometry x="10" y="360" width="220" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_job_apply -->
+        <mxCell id="job_apply" value="t_job_apply&#10;岗位投递表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="400" y="450" width="220" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="apply_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job_apply">
+          <mxGeometry x="10" y="40" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="apply_aid" value="apply_id [UK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job_apply">
+          <mxGeometry x="10" y="60" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="apply_job_id" value="job_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="job_apply">
+          <mxGeometry x="10" y="80" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="apply_student_id" value="student_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="job_apply">
+          <mxGeometry x="10" y="100" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="apply_status" value="apply_status TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job_apply">
+          <mxGeometry x="10" y="120" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="apply_interview" value="interview_time DATETIME" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job_apply">
+          <mxGeometry x="10" y="140" width="200" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_job_match_log -->
+        <mxCell id="job_match" value="t_job_match_log&#10;智能匹配日志表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="700" y="450" width="200" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="match_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job_match">
+          <mxGeometry x="10" y="40" width="180" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="match_student" value="student_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="job_match">
+          <mxGeometry x="10" y="60" width="180" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="match_job" value="job_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="job_match">
+          <mxGeometry x="10" y="80" width="180" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="match_score" value="match_score DECIMAL(5,2)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="job_match">
+          <mxGeometry x="10" y="100" width="180" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- 关系线: enterprise -> job -->
+        <mxCell id="rel_enterprise_job" value="enterprise_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="enterprise" target="job">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- 关系线: job -> job_apply -->
+        <mxCell id="rel_job_apply" value="job_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" edge="1" parent="1" source="job" target="job_apply">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- 关系线: student -> job_apply -->
+        <mxCell id="rel_student_apply" value="student_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="student" target="job_apply">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- 模块3标题 -->
+        <mxCell id="title3" value="模块3: 薪资与结算体系" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="850" width="200" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_electronic_agreement -->
+        <mxCell id="agreement" value="t_electronic_agreement&#10;电子协议表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="100" y="900" width="240" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="agree_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="agreement">
+          <mxGeometry x="10" y="40" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="agree_aid" value="agreement_id [UK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="agreement">
+          <mxGeometry x="10" y="60" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="agree_job" value="job_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="agreement">
+          <mxGeometry x="10" y="80" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="agree_student" value="student_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="agreement">
+          <mxGeometry x="10" y="100" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="agree_enterprise" value="enterprise_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="agreement">
+          <mxGeometry x="10" y="120" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="agree_content" value="agreement_content TEXT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="agreement">
+          <mxGeometry x="10" y="140" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="agree_url" value="agreement_url VARCHAR(255)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="agreement">
+          <mxGeometry x="10" y="160" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="agree_status" value="sign_status TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="agreement">
+          <mxGeometry x="10" y="180" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="agree_hash" value="blockchain_hash VARCHAR(256)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="agreement">
+          <mxGeometry x="10" y="200" width="220" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_salary_escrow -->
+        <mxCell id="salary_escrow" value="t_salary_escrow&#10;薪资托管表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="400" y="900" width="220" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="escrow_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="salary_escrow">
+          <mxGeometry x="10" y="40" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="escrow_eid" value="escrow_id [UK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="salary_escrow">
+          <mxGeometry x="10" y="60" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="escrow_enterprise" value="enterprise_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="salary_escrow">
+          <mxGeometry x="10" y="80" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="escrow_job" value="job_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="salary_escrow">
+          <mxGeometry x="10" y="100" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="escrow_total" value="total_amount DECIMAL(10,2)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="salary_escrow">
+          <mxGeometry x="10" y="120" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="escrow_paid" value="paid_amount DECIMAL(10,2)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="salary_escrow">
+          <mxGeometry x="10" y="140" width="200" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_salary_flow -->
+        <mxCell id="salary_flow" value="t_salary_flow&#10;薪资流水表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="700" y="900" width="240" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="salary_flow">
+          <mxGeometry x="10" y="40" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_fid" value="flow_id [UK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="salary_flow">
+          <mxGeometry x="10" y="60" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_student" value="student_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="salary_flow">
+          <mxGeometry x="10" y="80" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_enterprise" value="enterprise_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="salary_flow">
+          <mxGeometry x="10" y="100" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_job" value="job_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="salary_flow">
+          <mxGeometry x="10" y="120" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_agree" value="agreement_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="salary_flow">
+          <mxGeometry x="10" y="140" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_hours" value="work_hours DECIMAL(10,2)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="salary_flow">
+          <mxGeometry x="10" y="160" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_salary" value="salary_amount DECIMAL(10,2)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="salary_flow">
+          <mxGeometry x="10" y="180" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_actual" value="actual_amount DECIMAL(10,2)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="salary_flow">
+          <mxGeometry x="10" y="200" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_tax" value="tax_amount DECIMAL(10,2)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="salary_flow">
+          <mxGeometry x="10" y="220" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_status" value="settlement_status TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="salary_flow">
+          <mxGeometry x="10" y="240" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_trace" value="trace_id VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="salary_flow">
+          <mxGeometry x="10" y="260" width="220" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_clock_record -->
+        <mxCell id="clock" value="t_clock_record&#10;打卡记录表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="900" width="220" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="clock_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="clock">
+          <mxGeometry x="10" y="40" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="clock_rid" value="record_id [UK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="clock">
+          <mxGeometry x="10" y="60" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="clock_student" value="student_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="clock">
+          <mxGeometry x="10" y="80" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="clock_job" value="job_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="clock">
+          <mxGeometry x="10" y="100" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="clock_type" value="clock_type TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="clock">
+          <mxGeometry x="10" y="120" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="clock_time" value="clock_time DATETIME" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="clock">
+          <mxGeometry x="10" y="140" width="200" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- 模块4标题 -->
+        <mxCell id="title4" value="模块4: 安全与增值服务" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="1200" width="200" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_complaint -->
+        <mxCell id="complaint" value="t_complaint&#10;投诉纠纷表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1250" width="240" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="complaint">
+          <mxGeometry x="10" y="40" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_cid" value="complaint_id [UK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="complaint">
+          <mxGeometry x="10" y="60" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_complainant" value="complainant_id VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="complaint">
+          <mxGeometry x="10" y="80" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_complainant_type" value="complainant_type TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="complaint">
+          <mxGeometry x="10" y="100" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_defendant" value="defendant_id VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="complaint">
+          <mxGeometry x="10" y="120" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_defendant_type" value="defendant_type TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="complaint">
+          <mxGeometry x="10" y="140" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_job" value="job_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="complaint">
+          <mxGeometry x="10" y="160" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_type" value="complaint_type TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="complaint">
+          <mxGeometry x="10" y="180" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_content" value="complaint_content TEXT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="complaint">
+          <mxGeometry x="10" y="200" width="220" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_insurance -->
+        <mxCell id="insurance" value="t_insurance&#10;兼职意外险表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1250" width="220" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="ins_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="insurance">
+          <mxGeometry x="10" y="40" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ins_iid" value="insurance_id [UK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="insurance">
+          <mxGeometry x="10" y="60" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ins_student" value="student_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="insurance">
+          <mxGeometry x="10" y="80" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ins_job" value="job_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="insurance">
+          <mxGeometry x="10" y="100" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ins_enterprise" value="enterprise_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="insurance">
+          <mxGeometry x="10" y="120" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ins_type" value="insurance_type VARCHAR(32)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="insurance">
+          <mxGeometry x="10" y="140" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ins_premium" value="premium DECIMAL(10,2)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="insurance">
+          <mxGeometry x="10" y="160" width="200" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_practice_report -->
+        <mxCell id="practice" value="t_practice_report&#10;实践认证报告表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="700" y="1250" width="220" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="practice_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="practice">
+          <mxGeometry x="10" y="40" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="practice_rid" value="report_id [UK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="practice">
+          <mxGeometry x="10" y="60" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="practice_student" value="student_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="practice">
+          <mxGeometry x="10" y="80" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="practice_job" value="job_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="practice">
+          <mxGeometry x="10" y="100" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="practice_enterprise" value="enterprise_id [FK] VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;" vertex="1" parent="practice">
+          <mxGeometry x="10" y="120" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="practice_content" value="work_content TEXT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="practice">
+          <mxGeometry x="10" y="140" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="practice_duration" value="work_duration INT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="practice">
+          <mxGeometry x="10" y="160" width="200" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- t_audit_log -->
+        <mxCell id="audit" value="t_audit_log&#10;操作审计日志表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1250" width="220" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="audit_id" value="id [PK] BIGINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="audit">
+          <mxGeometry x="10" y="40" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="audit_operator" value="operator_id VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="audit">
+          <mxGeometry x="10" y="60" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="audit_role" value="operator_role TINYINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="audit">
+          <mxGeometry x="10" y="80" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="audit_module" value="module VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="audit">
+          <mxGeometry x="10" y="100" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="audit_action" value="action VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="audit">
+          <mxGeometry x="10" y="120" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="audit_trace" value="trace_id VARCHAR(64)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="audit">
+          <mxGeometry x="10" y="140" width="200" height="20" as="geometry"/>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
